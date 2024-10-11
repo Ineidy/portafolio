@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ineidy Web - Portafolio de Servicios</title>
+    <link rel="stylesheet" href="estilos/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1 class="logo">Ineidy Web</h1>
+        <div class="barra-busqueda">
+            <input type="text" id="busqueda" placeholder="Buscar en el portafolio...">
+            <div class="sugerencias">
+                <a href="#objetivos">Objetivos profesionales</a>
+                <a href="#mision">Misión, visión y valores</a>
+                <a href="#certificaciones">Certificaciones</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#proyectos">Proyectos</a>
+                <a href="#contacto">Datos de contacto</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="inicio" class="seccion-activa">
+            <div class="lenguajes-3d" id="lenguajes-container"></div>
+            <div class="mision-vision-valores">
+                <h2>Misión, Visión y Valores</h2>
+                <p>Misión: Crear soluciones web innovadoras y eficientes.</p>
+                <p>Visión: Ser líder en desarrollo web creativo y funcional.</p>
+                <p>Valores: Creatividad, Eficiencia, Aprendizaje continuo.</p>
+            </div>
+        </section>
+
+        <section id="objetivos" class="seccion-oculta">
+            <button class="boton-volver">Volver al Inicio</button>
+            <div class="biografia">
+                <img src="https://via.placeholder.com/300x300" alt="Foto de Ineidy" class="foto-perfil">
+                <div class="texto-biografia">
+                    <h2>Objetivos Profesionales</h2>
+                    <p>Como desarrolladora web apasionada, mi objetivo es crear experiencias digitales únicas y funcionales. Busco constantemente aprender nuevas tecnologías y mejorar mis habilidades para ofrecer soluciones web innovadoras y de alta calidad.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="certificaciones" class="seccion-oculta">
+            <button class="boton-volver">Volver al Inicio</button>
+            <h2>Certificaciones</h2>
+            <ul class="lista-certificados">
+                <li>Desarrollo Web Full Stack - Platzi</li>
+                <li>JavaScript Avanzado - Udemy</li>
+                <li>Diseño UX/UI - Google</li>
+                <li>React.js Profesional - Coursera</li>
+            </ul>
+        </section>
+
+        <section id="servicios" class="seccion-oculta">
+            <button class="boton-volver">Volver al Inicio</button>
+            <h2>Servicios</h2>
+            <div class="grid-servicios">
+                <div class="servicio">
+                    <h3>Desarrollo Web</h3>
+                    <p>Creación de sitios web responsivos y modernos.</p>
+                </div>
+                <div class="servicio">
+                    <h3>Diseño UX/UI</h3>
+                    <p>Diseño de interfaces intuitivas y atractivas.</p>
+                </div>
+                <div class="servicio">
+                    <h3>SEO</h3>
+                    <p>Optimización para motores de búsqueda.</p>
+                </div>
+                <div class="servicio">
+                    <h3>Mantenimiento Web</h3>
+                    <p>Actualización y soporte continuo de sitios web.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="proyectos" class="seccion-oculta">
+            <button class="boton-volver">Volver al Inicio</button>
+            <h2>Proyectos</h2>
+            <div class="grid-proyectos">
+                <div class="proyecto" data-proyecto="ecommerce">
+                    <h3>E-commerce de Moda</h3>
+                    <p>Tienda en línea para una marca de ropa local.</p>
+                </div>
+                <div class="proyecto" data-proyecto="blog">
+                    <h3>Blog de Viajes</h3>
+                    <p>Plataforma para compartir experiencias de viaje.</p>
+                </div>
+                <div class="proyecto" data-proyecto="app">
+                    <h3>Aplicación de Fitness</h3>
+                    <p>App móvil para seguimiento de rutinas de ejercicio.</p>
+                </div>
+            </div>
+            <div class="detalle-proyecto">
+                <div class="info-proyecto">
+                    <h3 id="titulo-proyecto"></h3>
+                    <p id="descripcion-proyecto"></p>
+                    <p id="fecha-proyecto"></p>
+                    <p id="cliente-proyecto"></p>
+                </div>
+                <div class="imagen-proyecto">
+                    <img id="img-proyecto" src="" alt="Imagen del proyecto">
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="seccion-oculta">
+            <button class="boton-volver">Volver al Inicio</button>
+            <div class="grid-contacto">
+                <div class="datos-contacto">
+                    <h2>Datos de Contacto</h2>
+                    <p>Teléfono: +1234567890</p>
+                    <p>Email: ineidy@example.com</p>
+                    <div class="redes-sociales">
+
+                    </div>
+                </div>
+                <div class="formulario-contacto">
+                    <h2>Envíame un mensaje</h2>
+                    <form id="form-contacto">
+                        <input type="email" id="email-contacto" placeholder="Tu email" required>
+                        <textarea id="mensaje-contacto" placeholder="Tu mensaje" required></textarea>
+                        <button type="submit">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>
