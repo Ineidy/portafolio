@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
 
 :root {
-    --primary-color: #a288be;
-    --secondary-color: #344869;
+    --primary-color: #6a11cb;
+    --secondary-color: #2575fc;
     --text-color: #ffffff;
     --background-color: #1a1a2e;
-    --accent-color: #000000;
+    --accent-color: #ffd700;
 }
 
 * {
@@ -97,6 +97,19 @@ body {
     }
 }
 
+.subtitle {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    opacity: 0;
+    animation: fadeIn 2s forwards 1s;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
 .btn-neon {
     font-size: 1.5rem;
     display: inline-block;
@@ -110,6 +123,9 @@ body {
     box-shadow: inset 0 0 0.5em 0 var(--accent-color), 0 0 0.5em 0 var(--accent-color);
     position: relative;
     transition: background-color 100ms linear;
+    margin-top: 2rem;
+    opacity: 0;
+    animation: fadeIn 2s forwards 2s;
 }
 
 .btn-neon::before {
@@ -228,6 +244,33 @@ p {
     margin-bottom: 1rem;
 }
 
+.content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: var(--secondary-color);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 117, 252, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(37, 117, 252, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 117, 252, 0);
+    }
+}
+
 .proyecto-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -235,14 +278,15 @@ p {
 }
 
 .proyecto {
-    background: linear-gradient(45deg, rgba(106, 17, 203, 0.1), rgba(37, 117, 252, 0.1));
+    background: linear-gradient(45deg,   rgba(106, 17, 203, 0.1), rgba(37, 117, 252, 0.1));
     border-radius: 15px;
     padding: 2rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
 }
 
 .proyecto:hover {
-    transform: translateY(-10px);
+    transform: translateY(-10px) scale(1.05);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -260,11 +304,12 @@ p {
     margin: 0.5rem;
     border-radius: 20px;
     font-weight: bold;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .skills-list li:hover {
     transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(37, 117, 252, 0.4);
 }
 
 .social-links {
@@ -273,16 +318,16 @@ p {
     margin-top: 1rem;
 }
 
-.social-links a {
+.social-icon {
     color: var(--text-color);
     font-size: 2rem;
     margin: 0 1rem;
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
-.social-links a:hover {
+.social-icon:hover {
     color: var(--accent-color);
-    transform: scale(1.2);
+    transform: scale(1.2) rotate(360deg);
 }
 
 footer {
@@ -309,5 +354,10 @@ footer {
 
     h2 {
         font-size: 2rem;
+    }
+
+    .content-wrapper {
+        flex-direction: column;
+        text-align: center;
     }
 }

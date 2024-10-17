@@ -6,11 +6,13 @@
     <title>...</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 </head>
 <body>
     <div id="landing-page" class="active">
         <h1 class="glitch" data-text="Ineidy">Ineidy</h1>
-        <p>Desarrolladora Web</p>
+        <p class="subtitle">Desarrolladora Web</p>
         <button id="start-button" class="btn-neon">Iniciar</button>
     </div>
 
@@ -28,21 +30,23 @@
 
         <main>
             <section id="sobre-mi" class="section">
-                <h2>Sobre Mí</h2>
-                <p>"La tecnología es el arte de lo posible; es la chispa que enciende la innovación y transforma las ideas en realidades que mejoran nuestra vida cotidiana."
-                    Desarrolladora entusiasta de la tecnología y la creatividad. Tengo el objetivo de hacer realidad ideas innovadoras mediante soluciones digitales. Soy proactiva y responsable, siempre preparada para aprender y asumir desafíos adicionales.
-                    Me gusta trabajar en grupo, donde la creatividad y la cooperación se combinan para solucionar desafíos apasionantes. Siempre busco proyectos que no solo sean difíciles, sino que también puedan hacer un impacto positivo.</p>
+                <h2 data-aos="fade-down">Sobre Mí</h2>
+                <div class="content-wrapper" data-aos="fade-up">
+                    <div class="avatar"></div>
+                    <p>"La tecnología es el arte de lo posible; es la chispa que enciende la innovación y transforma las ideas en realidades que mejoran nuestra vida cotidiana.
+                        Desarrolladora entusiasta de la tecnología y la creatividad. Tengo el objetivo de hacer realidad ideas innovadoras mediante soluciones digitales. Soy proactiva y responsable, siempre preparada para aprender y asumir desafíos adicionales.
+                        Me gusta trabajar en grupo, donde la creatividad y la cooperación se combinan para solucionar desafíos apasionantes. Siempre busco proyectos que no solo sean difíciles, sino que también puedan hacer un impacto positivo.</p>
+                </div>
             </section>
 
             <section id="proyectos" class="section">
-                <h2>Proyectos Destacados</h2>
+                <h2 data-aos="fade-down">Proyectos Destacados</h2>
                 <div class="proyecto-container">
-                    <div class="proyecto">
+                    <div class="proyecto" data-aos="flip-left">
                         <h3>Sistema G&C de Inventario CampusLands</h3>
-                        <p>El Sistema G&C de Inventario CampusLands es una aplicación creada para gestionar eficazmente el inventario de activos en la sede principal de CampusLands en Bucaramanga. Esta herramienta permite administrar activos, personal y zonas dentro del campus, facilitando la asignación, el mantenimiento y el control de todos los elementos físicos y recursos humanos de la organización.
-                            Desarrollamos un sistema de gestión de inventario para Campuslands utilizando Python. Este proyecto optimiza el seguimiento y control de inventarios, proporcionando una interfaz intuitiva y funcionalidades avanzadas para administrar productos y recursos.</p>
+                        <p>El Sistema G&C de Inventario CampusLands es una aplicación creada para gestionar eficazmente el inventario de activos en la sede principal de CampusLands en Bucaramanga. Esta herramienta permite administrar activos, personal y zonas dentro del campus, facilitando la asignación, el mantenimiento y el control de todos los elementos físicos y recursos humanos de la organización.</p>
                     </div>
-                    <div class="proyecto">
+                    <div class="proyecto" data-aos="flip-up">
                         <h3>Space X</h3>
                         <p>Implementamos un portafolio digital para una empresa aeroespacial, destacando servicios y capacidades de sus cohetes para el turismo intergaláctico. En colaboración con los equipos de diseño UI/UX y sistemas, desarrollamos una aplicación web en HTML, CSS y JavaScript que facilita la visualización de información técnica y misiones posibles.</p>
                     </div>
@@ -50,26 +54,24 @@
             </section>
 
             <section id="habilidades" class="section">
-                <h2>Habilidades Técnicas</h2>
+                <h2 data-aos="fade-down">Habilidades Técnicas</h2>
                 <ul class="skills-list">
-                    <li>JavaScript (ES6+)</li>
-                    <li>React.js</li>
-                    <li>Node.js</li>
-                    <li>Python</li>
-                    <li>SQL y NoSQL databases</li>
-                    <li>AWS</li>
-                    <li>Docker</li>
-                    <li>Git</li>
+                    <li data-aos="zoom-in" data-aos-delay="100">JavaScript (ES6+)</li>
+                    <li data-aos="zoom-in" data-aos-delay="200">React.js</li>
+                    <li data-aos="zoom-in" data-aos-delay="300">Node.js</li>
+                    <li data-aos="zoom-in" data-aos-delay="400">Python</li>
+                    <li data-aos="zoom-in" data-aos-delay="500">SQL y NoSQL databases</li>
+                    <li data-aos="zoom-in" data-aos-delay="800">Git</li>
                 </ul>
             </section>
 
             <section id="contacto" class="section">
-                <h2>Contacto</h2>
-                <p>¿Interesado en colaborar? ¡Contáctame!</p>
-                <div class="social-links">
-                    <a href="mailto:ineidy@example.com"><i class="fas fa-envelope"></i></a>
-                    <a href="https://linkedin.com/in/ineidy" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/ineidy" target="_blank"><i class="fab fa-github"></i></a>
+                <h2 data-aos="fade-down">Contacto</h2>
+                <p data-aos="fade-up">¿Interesado en colaborar? ¡Contáctame!</p>
+                <div class="social-links" data-aos="fade-up" data-aos-delay="200">
+                    <a href="mailto:ineidy@example.com" class="social-icon"><i class="fas fa-envelope"></i></a>
+                    <a href="https://linkedin.com/in/ineidy" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/ineidy" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
                 </div>
             </section>
         </main>
