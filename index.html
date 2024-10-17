@@ -3,136 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ineidy Web - Portafolio de Servicios</title>
-    <link rel="stylesheet" href="estilos/style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Pacifico&display=swap" rel="stylesheet">
+    <title>...</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
 </head>
 <body>
-    <header>
-        <h1 class="logo">Ineidy Web</h1>
-        <div class="barra-busqueda">
-            <input type="text" id="busqueda" placeholder="Buscar en el portafolio...">
-            <div class="sugerencias">
-                <a href="#objetivos">Objetivos profesionales</a>
-                <a href="#mision">Misión, visión y valores</a>
-                <a href="#certificaciones">Certificaciones</a>
-                <a href="#servicios">Servicios</a>
-                <a href="#proyectos">Proyectos</a>
-                <a href="#contacto">Datos de contacto</a>
-            </div>
-        </div>
-    </header>
+    <div id="landing-page" class="active">
+        <h1 class="glitch" data-text="Ineidy">Ineidy</h1>
+        <p>Desarrolladora Web</p>
+        <button id="start-button" class="btn-neon">Iniciar</button>
+    </div>
 
-    <main>
-        <section id="inicio" class="seccion-activa">
-            <div class="lenguajes-3d" id="lenguajes-container"></div>
-            <div class="mision-vision-valores">
-                <h2>Misión, Visión y Valores</h2>
-                <p>Misión: Crear soluciones web innovadoras y eficientes.</p>
-                <p>Visión: Ser líder en desarrollo web creativo y funcional.</p>
-                <p>Valores: Creatividad, Eficiencia, Aprendizaje continuo.</p>
-            </div>
-        </section>
+    <div id="main-content" class="hidden">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="#sobre-mi">Sobre Mí</a></li>
+                    <li><a href="#proyectos">Proyectos</a></li>
+                    <li><a href="#habilidades">Habilidades</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
 
-        <section id="objetivos" class="seccion-oculta">
-            <button class="boton-volver">Volver al Inicio</button>
-            <div class="biografia">
-                <img src="https://via.placeholder.com/300x300" alt="Foto de Ineidy" class="foto-perfil">
-                <div class="texto-biografia">
-                    <h2>Objetivos Profesionales</h2>
-                    <p>Como desarrolladora web apasionada, mi objetivo es crear experiencias digitales únicas y funcionales. Busco constantemente aprender nuevas tecnologías y mejorar mis habilidades para ofrecer soluciones web innovadoras y de alta calidad.</p>
-                </div>
-            </div>
-        </section>
+        <main>
+            <section id="sobre-mi" class="section">
+                <h2>Sobre Mí</h2>
+                <p>"La tecnología es el arte de lo posible; es la chispa que enciende la innovación y transforma las ideas en realidades que mejoran nuestra vida cotidiana."
+                    Desarrolladora entusiasta de la tecnología y la creatividad. Tengo el objetivo de hacer realidad ideas innovadoras mediante soluciones digitales. Soy proactiva y responsable, siempre preparada para aprender y asumir desafíos adicionales.
+                    Me gusta trabajar en grupo, donde la creatividad y la cooperación se combinan para solucionar desafíos apasionantes. Siempre busco proyectos que no solo sean difíciles, sino que también puedan hacer un impacto positivo.</p>
+            </section>
 
-        <section id="certificaciones" class="seccion-oculta">
-            <button class="boton-volver">Volver al Inicio</button>
-            <h2>Certificaciones</h2>
-            <ul class="lista-certificados">
-                <li>Desarrollo Web Full Stack - Platzi</li>
-                <li>JavaScript Avanzado - Udemy</li>
-                <li>Diseño UX/UI - Google</li>
-                <li>React.js Profesional - Coursera</li>
-            </ul>
-        </section>
-
-        <section id="servicios" class="seccion-oculta">
-            <button class="boton-volver">Volver al Inicio</button>
-            <h2>Servicios</h2>
-            <div class="grid-servicios">
-                <div class="servicio">
-                    <h3>Desarrollo Web</h3>
-                    <p>Creación de sitios web responsivos y modernos.</p>
-                </div>
-                <div class="servicio">
-                    <h3>Diseño UX/UI</h3>
-                    <p>Diseño de interfaces intuitivas y atractivas.</p>
-                </div>
-                <div class="servicio">
-                    <h3>SEO</h3>
-                    <p>Optimización para motores de búsqueda.</p>
-                </div>
-                <div class="servicio">
-                    <h3>Mantenimiento Web</h3>
-                    <p>Actualización y soporte continuo de sitios web.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="proyectos" class="seccion-oculta">
-            <button class="boton-volver">Volver al Inicio</button>
-            <h2>Proyectos</h2>
-            <div class="grid-proyectos">
-                <div class="proyecto" data-proyecto="ecommerce">
-                    <h3>E-commerce de Moda</h3>
-                    <p>Tienda en línea para una marca de ropa local.</p>
-                </div>
-                <div class="proyecto" data-proyecto="blog">
-                    <h3>Blog de Viajes</h3>
-                    <p>Plataforma para compartir experiencias de viaje.</p>
-                </div>
-                <div class="proyecto" data-proyecto="app">
-                    <h3>Aplicación de Fitness</h3>
-                    <p>App móvil para seguimiento de rutinas de ejercicio.</p>
-                </div>
-            </div>
-            <div class="detalle-proyecto">
-                <div class="info-proyecto">
-                    <h3 id="titulo-proyecto"></h3>
-                    <p id="descripcion-proyecto"></p>
-                    <p id="fecha-proyecto"></p>
-                    <p id="cliente-proyecto"></p>
-                </div>
-                <div class="imagen-proyecto">
-                    <img id="img-proyecto" src="" alt="Imagen del proyecto">
-                </div>
-            </div>
-        </section>
-
-        <section id="contacto" class="seccion-oculta">
-            <button class="boton-volver">Volver al Inicio</button>
-            <div class="grid-contacto">
-                <div class="datos-contacto">
-                    <h2>Datos de Contacto</h2>
-                    <p>Teléfono: +1234567890</p>
-                    <p>Email: ineidy@example.com</p>
-                    <div class="redes-sociales">
-
+            <section id="proyectos" class="section">
+                <h2>Proyectos Destacados</h2>
+                <div class="proyecto-container">
+                    <div class="proyecto">
+                        <h3>Sistema G&C de Inventario CampusLands</h3>
+                        <p>El Sistema G&C de Inventario CampusLands es una aplicación creada para gestionar eficazmente el inventario de activos en la sede principal de CampusLands en Bucaramanga. Esta herramienta permite administrar activos, personal y zonas dentro del campus, facilitando la asignación, el mantenimiento y el control de todos los elementos físicos y recursos humanos de la organización.
+                            Desarrollamos un sistema de gestión de inventario para Campuslands utilizando Python. Este proyecto optimiza el seguimiento y control de inventarios, proporcionando una interfaz intuitiva y funcionalidades avanzadas para administrar productos y recursos.</p>
+                    </div>
+                    <div class="proyecto">
+                        <h3>Space X</h3>
+                        <p>Implementamos un portafolio digital para una empresa aeroespacial, destacando servicios y capacidades de sus cohetes para el turismo intergaláctico. En colaboración con los equipos de diseño UI/UX y sistemas, desarrollamos una aplicación web en HTML, CSS y JavaScript que facilita la visualización de información técnica y misiones posibles.</p>
                     </div>
                 </div>
-                <div class="formulario-contacto">
-                    <h2>Envíame un mensaje</h2>
-                    <form id="form-contacto">
-                        <input type="email" id="email-contacto" placeholder="Tu email" required>
-                        <textarea id="mensaje-contacto" placeholder="Tu mensaje" required></textarea>
-                        <button type="submit">Enviar</button>
-                    </form>
-                </div>
-            </div>
-        </section>
-    </main>
+            </section>
 
-    <script src="scripts/script.js"></script>
+            <section id="habilidades" class="section">
+                <h2>Habilidades Técnicas</h2>
+                <ul class="skills-list">
+                    <li>JavaScript (ES6+)</li>
+                    <li>React.js</li>
+                    <li>Node.js</li>
+                    <li>Python</li>
+                    <li>SQL y NoSQL databases</li>
+                    <li>AWS</li>
+                    <li>Docker</li>
+                    <li>Git</li>
+                </ul>
+            </section>
+
+            <section id="contacto" class="section">
+                <h2>Contacto</h2>
+                <p>¿Interesado en colaborar? ¡Contáctame!</p>
+                <div class="social-links">
+                    <a href="mailto:ineidy@example.com"><i class="fas fa-envelope"></i></a>
+                    <a href="https://linkedin.com/in/ineidy" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/ineidy" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2023 Ineidy Salas. Todos los derechos reservados.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
