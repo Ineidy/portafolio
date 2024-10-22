@@ -22,6 +22,10 @@ body {
     overflow-x: hidden;
 }
 
+a {
+text-decoration: none;
+}
+
 #landing-page {
     height: 100vh;
     display: flex;
@@ -162,7 +166,7 @@ main {
 }
 
 .section {
-    margin: 4rem 0;
+    margin: 8rem 0; /* Aumentado de 4rem a 8rem */
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.5s ease, transform 0.5s ease;
@@ -194,12 +198,29 @@ p {
     gap: 2rem;
 }
 
-.avatar {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    background-color: var(--secondary-color);
-    animation: pulse 2s infinite;
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content-wrapper p {
+    flex: 1;
+}
+
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .avatar {
+        margin-bottom: 1rem;
+    }
+
+    .content-wrapper p {
+        text-align: center;
+    }
 }
 
 @keyframes pulse {
@@ -310,6 +331,7 @@ p {
 }
 
 .proyecto-container {
+    color: white ;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
