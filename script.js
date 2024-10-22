@@ -93,6 +93,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Iniciar la animación de escritura para el primer elemento de texto del terminal
     if (terminalTexts.length > 0) {
         terminalTexts[0].textContent = '';
-        typeWriter(terminalTexts[0], terminalTexts[0].textContent);
+        typeWriter(terminalTexts[0]);
     }
 });
