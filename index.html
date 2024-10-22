@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>...</title>
+    <title>Portafolio...</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
@@ -11,16 +11,30 @@
 </head>
 <body>
     <div id="landing-page" class="active">
-        <h1 class="glitch" data-text="Ineidy">Ineidy</h1>
-        <p class="subtitle">Desarrolladora Web</p>
-        <button id="start-button" class="btn-neon">Iniciar</button>
+    <div class="terminal">
+        <div class="terminal-header">
+            <div class="terminal-button close"></div>
+            <div class="terminal-button minimize"></div>
+            <div class="terminal-button maximize"></div>
+        </div>
+        <div class="terminal-content">
+            <p class="terminal-text">Cargando perfil...</p>
+            <p class="terminal-text">Bienvenido al portafolio de Ineidy...</p>
+            <p class="terminal-text">Carga completa.</p>
+            <p class="terminal-prompt">> Presiona ENTER para continuar</p>
+        </div>
     </div>
+</div>
 
     <div id="main-content" class="hidden">
         <header>
             <nav>
                 <ul>
                     <li><a href="#sobre-mi">Sobre Mí</a></li>
+                    <li><a href="#objetivos">Objetivos</a></li>
+                    <li><a href="#mision-vision">Misión y Visión</a></li>
+                    <li><a href="#certificaciones">Certificaciones</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
                     <li><a href="#proyectos">Proyectos</a></li>
                     <li><a href="#habilidades">Habilidades</a></li>
                     <li><a href="#contacto">Contacto</a></li>
@@ -39,6 +53,91 @@
                 </div>
             </section>
 
+            <section id="objetivos" class="section">
+                <h2 data-aos="fade-down">Objetivos Profesionales</h2>
+                <div class="content-wrapper" data-aos="fade-up">
+                    <ul class="objetivos-list">
+                        <li>Desarrollar soluciones tecnológicas innovadoras que impacten positivamente en la sociedad</li>
+                        <li>Continuar aprendiendo y mantenerme actualizada con las últimas tendencias en desarrollo web</li>
+                        <li>Colaborar en proyectos desafiantes que me permitan crecer profesionalmente</li>
+                        <li>Contribuir al crecimiento de la comunidad tecnológica compartiendo conocimientos y experiencias</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="mision-vision" class="section">
+                <h2 data-aos="fade-down">Misión, Visión y Valores</h2>
+                <div class="content-wrapper" data-aos="fade-up">
+                    <div class="mision-vision-container">
+                        <div class="mision">
+                            <h3>Misión</h3>
+                            <p>Crear soluciones digitales innovadoras y de alta calidad que mejoren la vida de las personas y contribuyan al progreso tecnológico.</p>
+                        </div>
+                        <div class="vision">
+                            <h3>Visión</h3>
+                            <p>Ser reconocida como una desarrolladora web líder, capaz de transformar ideas creativas en realidades digitales impactantes.</p>
+                        </div>
+                        <div class="valores">
+                            <h3>Valores</h3>
+                            <ul>
+                                <li>Innovación</li>
+                                <li>Excelencia</li>
+                                <li>Colaboración</li>
+                                <li>Aprendizaje continuo</li>
+                                <li>Responsabilidad social</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="certificaciones" class="section">
+                <h2 data-aos="fade-down">Certificaciones</h2>
+                <div class="certificaciones-container" data-aos="fade-up">
+                    <div class="certificacion">
+                        <i class="fas fa-certificate"></i>
+                        <h3>Desarrollo Web Full Stack</h3>
+                        <p>Bootcamp intensivo de 6 meses</p>
+                    </div>
+                    <div class="certificacion">
+                        <i class="fas fa-certificate"></i>
+                        <h3>JavaScript Avanzado</h3>
+                        <p>Curso especializado en ES6+ y patrones de diseño</p>
+                    </div>
+                    <div class="certificacion">
+                        <i class="fas fa-certificate"></i>
+                        <h3>React.js y Redux</h3>
+                        <p>Desarrollo de aplicaciones web modernas</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="servicios" class="section">
+                <h2 data-aos="fade-down">Servicios</h2>
+                <div class="servicios-container" data-aos="fade-up">
+                    <div class="servicio">
+                        <i class="fas fa-laptop-code"></i>
+                        <h3>Desarrollo Web</h3>
+                        <p>Creación de sitios web responsivos y aplicaciones web interactivas</p>
+                    </div>
+                    <div class="servicio">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3>Desarrollo de Aplicaciones Móviles</h3>
+                        <p>Diseño y desarrollo de apps nativas y multiplataforma</p>
+                    </div>
+                    <div class="servicio">
+                        <i class="fas fa-server"></i>
+                        <h3>Backend y APIs</h3>
+                        <p>Desarrollo de servidores robustos y APIs RESTful</p>
+                    </div>
+                    <div class="servicio">
+                        <i class="fas fa-database"></i>
+                        <h3>Bases de Datos</h3>
+                        <p>Diseño e implementación de bases de datos SQL y NoSQL</p>
+                    </div>
+                </div>
+            </section>
+
             <section id="proyectos" class="section">
                 <h2 data-aos="fade-down">Proyectos Destacados</h2>
                 <div class="proyecto-container">
@@ -49,6 +148,10 @@
                     <div class="proyecto" data-aos="flip-up">
                         <h3>Space X</h3>
                         <p>Implementamos un portafolio digital para una empresa aeroespacial, destacando servicios y capacidades de sus cohetes para el turismo intergaláctico. En colaboración con los equipos de diseño UI/UX y sistemas, desarrollamos una aplicación web en HTML, CSS y JavaScript que facilita la visualización de información técnica y misiones posibles.</p>
+                    </div>
+                    <div class="proyecto" data-aos="flip-right">
+                        <h3>E-commerce Artesanías Locales</h3>
+                        <p>Desarrollo de una plataforma de comercio electrónico para artesanos locales, permitiéndoles vender sus productos a nivel nacional e internacional. Implementación de pasarelas de pago seguras y sistema de gestión de inventario en tiempo real.</p>
                     </div>
                 </div>
             </section>
@@ -61,6 +164,8 @@
                     <li data-aos="zoom-in" data-aos-delay="300">Node.js</li>
                     <li data-aos="zoom-in" data-aos-delay="400">Python</li>
                     <li data-aos="zoom-in" data-aos-delay="500">SQL y NoSQL databases</li>
+                    <li data-aos="zoom-in" data-aos-delay="600">HTML5 & CSS3</li>
+                    <li data-aos="zoom-in" data-aos-delay="700">RESTful APIs</li>
                     <li data-aos="zoom-in" data-aos-delay="800">Git</li>
                 </ul>
             </section>
@@ -68,10 +173,16 @@
             <section id="contacto" class="section">
                 <h2 data-aos="fade-down">Contacto</h2>
                 <p data-aos="fade-up">¿Interesado en colaborar? ¡Contáctame!</p>
-                <div class="social-links" data-aos="fade-up" data-aos-delay="200">
+                <div class="contact-info" data-aos="fade-up" data-aos-delay="200">
+                    <p><i class="fas fa-envelope"></i> Email: ineidy@example.com</p>
+                    <p><i class="fas fa-phone"></i> Teléfono: +1 234 567 890</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Ubicación: Bucaramanga, Colombia</p>
+                </div>
+                <div class="social-links" data-aos="fade-up" data-aos-delay="400">
                     <a href="mailto:ineidy@example.com" class="social-icon"><i class="fas fa-envelope"></i></a>
                     <a href="https://linkedin.com/in/ineidy" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
                     <a href="https://github.com/ineidy" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+                    <a href="https://twitter.com/ineidy" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
                 </div>
             </section>
         </main>

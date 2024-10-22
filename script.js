@@ -1,9 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
     const landingPage = document.getElementById('landing-page');
     const mainContent = document.getElementById('main-content');
-    const startButton = document.getElementById('start-button');
     const sections = document.querySelectorAll('.section');
     const navLinks = document.querySelectorAll('nav a');
+    const terminalTexts = document.querySelectorAll('.terminal-text');
+    const terminalPrompt = document.querySelector('.terminal-prompt');
 
     AOS.init({
         duration: 1000,
@@ -11,7 +12,13 @@ document.addEventListener('DOMContentLoaded', () => {
         mirror: false,
     });
 
-    startButton.addEventListener('click', () => {
+    // Animar los textos del terminal
+    terminalTexts.forEach((text, index) => {
+        text.style.setProperty('--order', index);
+    });
+
+    // Función para iniciar el contenido principal
+    function startMainContent() {
         landingPage.classList.add('hidden');
         mainContent.classList.remove('hidden');
         mainContent.classList.add('active');
@@ -19,7 +26,17 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
             AOS.refresh();
         }, 500);
+    }
+
+    // Escuchar la tecla Enter
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter' && !landingPage.classList.contains('hidden')) {
+            startMainContent();
+        }
     });
+
+    // También permitir hacer clic en el prompt para continuar
+    terminalPrompt.addEventListener('click', startMainContent);
 
     const observerOptions = {
         root: null,
@@ -48,6 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
     navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
@@ -57,23 +75,24 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    const glitchElement = document.querySelector('.glitch');
-    const glitchText = glitchElement.textContent;
-    glitchElement.innerHTML = `
-        ${glitchText}
-        <span aria-hidden="true">${glitchText}</span>
-        <span aria-hidden="true">${glitchText}</span>
-    `;
-    const subtitle = document.querySelector('.subtitle');
-    const subtitleText = subtitle.textContent;
-    subtitle.textContent = '';
-    let i = 0;
-    const typeWriter = () => {
-        if (i < subtitleText.length) {
-            subtitle.textContent += subtitleText.charAt(i);
+    // Animación de escritura para el contenido del terminal
+    function typeWriter(element, text, i = 0) {
+        if (i < text.length) {
+            element.textContent += text.charAt(i);
             i++;
-            setTimeout(typeWriter, 100);
+            setTimeout(() => typeWriter(element, text, i), 50);
+        } else if (element.nextElementSibling) {
+            setTimeout(() => {
+                typeWriter(element.nextElementSibling, element.nextElementSibling.textContent);
+            }, 500);
+        } else {
+            terminalPrompt.style.display = 'block';
         }
-    };
-    setTimeout(typeWriter, 1000);
+    }
+
+    // Iniciar la animación de escritura para el primer elemento de texto del terminal
+    if (terminalTexts.length > 0) {
+        terminalTexts[0].textContent = '';
+        typeWriter(terminalTexts[0], terminalTexts[0].textContent);
+    }
 });
