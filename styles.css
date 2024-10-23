@@ -5,7 +5,8 @@
     --secondary-color: #ffffff;
     --secondary-colorr: #09337a;
     --text-color: #ffffff;
-    --background-color: #1a1a2e;
+    --background-color: #25253b;
+    --background-colorr: #000000;
     --accent-color: #ffd700;
 }
 
@@ -21,6 +22,7 @@ body {
     color: var(--text-color);
     background-color: var(--background-color);
     overflow-x: hidden;
+    background: linear-gradient(60deg, var(--background-colorr), var(--background-color));
 }
 
 a {
@@ -280,6 +282,15 @@ p {
 
 .valores ul li {
     margin-bottom: 0.5rem;
+}
+
+.content-wrapper p{
+    flex: 1;
+    min-width: 250px;
+    background: linear-gradient(45deg, rgba(106, 17, 203, 0.1), rgba(37, 117, 252, 0.1));
+    padding: 1.5rem;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
 }
 
 .certificaciones-container {
