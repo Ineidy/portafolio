@@ -11,6 +11,7 @@
 }
 
 * {
+
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -133,9 +134,7 @@ text-decoration: none;
 header {
     background-color: rgba(26, 26, 46, 0.8);
     padding: 1rem 0;
-    position: fixed;
     width: 100%;
-    top: 0;
     z-index: 1000;
     backdrop-filter: blur(10px);
 }
@@ -165,11 +164,9 @@ nav ul li a:hover {
 main {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 6rem 2rem 2rem;
 }
 
 .section {
-    margin: 8rem 0; /* Aumentado de 4rem a 8rem */
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.5s ease, transform 0.5s ease;
@@ -212,6 +209,9 @@ p {
 }
 
 @media (max-width: 768px) {
+    header {
+        position: relative;
+    }
     .content-wrapper {
         flex-direction: column;
         align-items: center;
@@ -262,7 +262,7 @@ p {
     gap: 2rem;
 }
 
-.mision, .vision, .valores {
+.mision, .vision, .valores, .valores ul {
     flex: 1;
     min-width: 250px;
     background: linear-gradient(45deg, rgba(106, 17, 203, 0.1), rgba(37, 117, 252, 0.1));
@@ -277,7 +277,7 @@ p {
 
 .valores ul {
     list-style-type: none;
-    padding: 0;
+
 }
 
 .valores ul li {

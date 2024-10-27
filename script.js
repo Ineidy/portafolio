@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelectorAll('nav a');
     const terminalTexts = document.querySelectorAll('.terminal-text');
     const terminalPrompt = document.querySelector('.terminal-prompt');
+    const header = document.querySelector('header'); // Selección del header para ocultarlo/mostrarlo
 
     AOS.init({
         duration: 1000,
@@ -95,4 +96,18 @@ document.addEventListener('DOMContentLoaded', () => {
         terminalTexts[0].textContent = '';
         typeWriter(terminalTexts[0]);
     }
+
+    // Ocultar el header al hacer scroll hacia abajo y mostrarlo al hacer scroll hacia arriba
+    let prevScrollPos = window.pageYOffset;
+
+    window.onscroll = () => {
+        let currentScrollPos = window.pageYOffset;
+
+        if (prevScrollPos > currentScrollPos) {
+            header.style.top = "0"; // Muestra el header
+        } else {
+            header.style.top = "-100px"; // Oculta el header
+        }
+        prevScrollPos = currentScrollPos;
+    };
 });
