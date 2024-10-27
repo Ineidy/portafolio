@@ -5,20 +5,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelectorAll('nav a');
     const terminalTexts = document.querySelectorAll('.terminal-text');
     const terminalPrompt = document.querySelector('.terminal-prompt');
-    const header = document.querySelector('header'); // Selección del header para ocultarlo/mostrarlo
+    const header = document.querySelector('header');
 
     AOS.init({
         duration: 1000,
         once: true,
         mirror: false,
     });
-
-    // Animar los textos del terminal
     terminalTexts.forEach((text, index) => {
         text.style.setProperty('--order', index);
     });
-
-    // Función para iniciar el contenido principal
     function startMainContent() {
         landingPage.classList.add('hidden');
         mainContent.classList.remove('hidden');
@@ -28,15 +24,11 @@ document.addEventListener('DOMContentLoaded', () => {
             AOS.refresh();
         }, 500);
     }
-
-    // Escuchar la tecla Enter
     document.addEventListener('keydown', (event) => {
         if (event.key === 'Enter' && !landingPage.classList.contains('hidden')) {
             startMainContent();
         }
     });
-
-    // También permitir hacer clic en el prompt para continuar
     terminalPrompt.addEventListener('click', startMainContent);
 
     const observerOptions = {
@@ -75,8 +67,6 @@ document.addEventListener('DOMContentLoaded', () => {
             targetSection.scrollIntoView({ behavior: 'smooth' });
         });
     });
-
-    // Animación de escritura para el contenido del terminal
     function typeWriter(element, text, i = 0) {
         if (i < text.length) {
             element.textContent += text.charAt(i);
@@ -90,23 +80,19 @@ document.addEventListener('DOMContentLoaded', () => {
             terminalPrompt.style.display = 'block';
         }
     }
-
-    // Iniciar la animación de escritura para el primer elemento de texto del terminal
     if (terminalTexts.length > 0) {
         terminalTexts[0].textContent = '';
         typeWriter(terminalTexts[0]);
     }
-
-    // Ocultar el header al hacer scroll hacia abajo y mostrarlo al hacer scroll hacia arriba
     let prevScrollPos = window.pageYOffset;
 
     window.onscroll = () => {
         let currentScrollPos = window.pageYOffset;
 
         if (prevScrollPos > currentScrollPos) {
-            header.style.top = "0"; // Muestra el header
+            header.style.top = "0"; 
         } else {
-            header.style.top = "-100px"; // Oculta el header
+            header.style.top = "-100px"; 
         }
         prevScrollPos = currentScrollPos;
     };

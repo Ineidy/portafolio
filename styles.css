@@ -199,9 +199,10 @@ p {
 }
 
 .avatar img {
-    width: 100%;
-    height: 100%;
+    width: 450px;
     object-fit: cover;
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)); /* Para compatibilidad con navegadores Webkit */
 }
 
 .content-wrapper p {
@@ -458,18 +459,12 @@ footer {
         grid-template-columns: 1fr;
     }
 }
-
-/* Estilos existentes... */
-
-/* Aumentar el espacio entre secciones */
 .section {
-    margin: 8rem 0; /* Aumentado de 4rem a 8rem */
+    margin: 8rem 0;
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.5s ease, transform 0.5s ease;
 }
-
-/* Estilos para el terminal */
 .terminal {
     background-color: #300a24;
     border-radius: 8px;
@@ -525,8 +520,6 @@ footer {
 @keyframes blink {
     50% { opacity: 0; }
 }
-
-/* Ajustar el diseño del botón para que se ajuste al estilo del terminal */
 .btn-neon {
     font-family: 'Courier New', monospace;
     background-color: transparent;
@@ -545,5 +538,3 @@ footer {
     background-color: var(--accent-color);
     color: var(--background-color);
 }
-
-/* Resto de los estilos existentes... */
