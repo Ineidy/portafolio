@@ -17,6 +17,15 @@
     box-sizing: border-box;
 }
 
+.bbbbb{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    border-color: #00000000;
+    color: rgb(0, 255, 255);
+    background-color:#00000000;
+    font-weight: 700;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
@@ -44,46 +53,6 @@ text-decoration: none;
     display: none;
 }
 
-.glitch {
-    font-size: 5rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    position: relative;
-    text-shadow: 0.05em 0 0 var(--accent-color), -0.05em -0.025em 0 #ff00ff,
-                 -0.025em 0.05em 0 #00ffff;
-    animation: glitch 725ms infinite;
-}
-
-@keyframes glitch {
-    0% {
-        text-shadow: 0.05em 0 0 var(--accent-color), -0.05em -0.025em 0 #ff00ff,
-                     -0.025em 0.05em 0 #00ffff;
-    }
-    14% {
-        text-shadow: 0.05em 0 0 var(--accent-color), -0.05em -0.025em 0 #ff00ff,
-                     -0.025em 0.05em 0 #00ffff;
-    }
-    15% {
-        text-shadow: -0.05em -0.025em 0 var(--accent-color), 0.025em 0.025em 0 #ff00ff,
-                     -0.05em -0.05em 0 #00ffff;
-    }
-    49% {
-        text-shadow: -0.05em -0.025em 0 var(--accent-color), 0.025em 0.025em 0 #ff00ff,
-                     -0.05em -0.05em 0 #00ffff;
-    }
-    50% {
-        text-shadow: 0.025em 0.05em 0 var(--accent-color), 0.05em 0 0 #ff00ff,
-                     0 -0.05em 0 #00ffff;
-    }
-    99% {
-        text-shadow: 0.025em 0.05em 0 var(--accent-color), 0.05em 0 0 #ff00ff,
-                     0 -0.05em 0 #00ffff;
-    }
-    100% {
-        text-shadow: -0.025em 0 0 var(--accent-color), -0.025em -0.025em 0 #ff00ff,
-                     -0.025em  -0.05em 0 #00ffff;
-    }
-}
 
 .subtitle {
     font-size: 1.5rem;

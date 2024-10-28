@@ -39,6 +39,19 @@
                     <li><a href="#proyectos">Proyectos</a></li>
                     <li><a href="#habilidades">Habilidades</a></li>
                     <li><a href="#contacto">Contacto</a></li>
+                    <li>
+                        <a href="./IneidyTatianaSalasCorrea.pdf" download="IneidyTatianaSalasCorrea.pdf">HDV</a>
+                    </li>
+                <button class="bbbbb" onclick="descargarArchivo()">Descargar HDV</button>
+            
+                <script>
+                    function descargarArchivo() {
+                        const enlace = document.createElement("a");
+                        enlace.href = "./IneidyTatianaSalasCorrea.pdf";
+                        enlace.download = "IneidyTatianaSalasCorrea.pdf";
+                        enlace.click();
+                    }
+                </script>
                 </ul>
             </nav>
         </header>
